@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+</head>
+<body>
+    <br>
+    <br>
+    <h1>Registratsiya uchun:</h1>
+    <br>
+    <form method="post" action="/register/">{% csrf_token %}
+        <input type="text" name="fl" placeholder="Full name">
+        <input type="text" name="g" placeholder="Guruh">
+        <input type="text" name="st" placeholder="Student raqam">
+        <input type="text" name="t" placeholder="Telefon raqam">
+        <input type="text" name="l" placeholder="Login">
+        <input type="password" name="p" placeholder="Parol">
+        <button type="submit">Sign up</button>
+    </form>
+</body>
+</html>
