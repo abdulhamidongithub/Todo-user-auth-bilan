@@ -51,5 +51,11 @@ def register(request):
         return redirect('/')
     return render(request, 'register.html')
 
+def todo_ochir(request,son):
+    p = Plan.objects.get(id=son)
+    if request.user == p.student.user:
+        p.delete()
+    return redirect('/plans/')
+
 
 
